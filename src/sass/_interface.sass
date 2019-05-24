@@ -2,6 +2,10 @@ body
   font-family: sans-serif
 
 img
+  display: none
+
+.image
+  display: inline-block
   max-width: 100%
 
 .container
@@ -18,8 +22,20 @@ img
     max-width: 580px
     width: 95%
 
+@media (max-width: 567px)
+  .container
+    max-width: 292px
+    width: 95%
+
+@media (max-width: 320px)
+  .container
+    max-width: 292px
+    width: 87%
+
 .button
   padding: 18px 30px
+  font-size: 13px
+  font-weight: 700
   background-color: $main-color
   border-radius: 10px
   border: none
