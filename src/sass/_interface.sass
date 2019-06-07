@@ -1,5 +1,9 @@
+*
+  box-sizing: border-box
+
 body
-  font-family: sans-serif
+  +reg
+  color: $text-color
 
 img
   display: none
@@ -33,9 +37,60 @@ img
     width: 87%
 
 .button
-  padding: 18px 30px
+  padding: 19px 30px 20px 29px
+  +bold
   font-size: 13px
-  font-weight: 700
   background-color: $main-color
   border-radius: 10px
   border: none
+  outline: none
+  
+  &:hover
+    background-color: lighten($main-color, 10%)
+    cursor: pointer
+
+@media (max-width: 567px)
+  .button
+    padding: 13px 27px 18px 25px
+    font-size: 10px
+    border-radius: 5px
+
+// Описание секций
+.section
+  padding: 90px 0
+
+  &-title
+    +bold
+    text-align: center
+
+  &-subtitle
+    display: block
+
+.input
+  border: 1px solid $border-input
+  padding: 20px 25px 19px 25px
+  font-size: 15px
+  line-height: 24px
+  border-radius: 10px
+  outline: none
+  &:focus
+    border-color: $main-color
+
+@media (max-width: 768px)
+  .section
+    padding: 45px 0
+
+@media (max-width: 567px)
+  .section
+    padding: 45px 0
+
+    &-title
+      font-size: 18px
+
+    &-subtitle
+      font-size: 14px
+
+  .arrows
+    &__left, &__right
+      &:hover
+        cursor: pointer
