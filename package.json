@@ -1,0 +1,28 @@
+{
+  "name": "repair",
+  "version": "1.0.0",
+  "description": "Сайт для компании \"Ремонт квартир\"",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huggeri/repair.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huggeri/repair/issues"
+  },
+  "homepage": "https://github.com/huggeri/repair#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-file-inline": "^2.2.3",
+    "gulp-tinypng-compress": "^1.2.5"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1"
+  }
+}
