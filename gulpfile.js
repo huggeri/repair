@@ -14,9 +14,9 @@ exports.default = defaultTask
 
 //сжимаем js.файлы
 gulp.task('js', function(cb){
-  return gulp.src('./src/js/up-button.js')
+  return gulp.src('./src/js/map-settings.js')
     .pipe(minifyjs())
-    .pipe(rename('up-button.min.js'))
+    .pipe(rename('map-settings.min.js'))
     .pipe(gulp.dest('dist/js'));
 
   cb();
