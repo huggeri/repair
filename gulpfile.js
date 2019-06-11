@@ -3,6 +3,7 @@ var cleanCss = require('gulp-clean-css');
 var htmlMin = require('gulp-htmlmin');
 var tinyPNG = require('gulp-tinypng-compress');
 var minifyjs = require('gulp-js-minify');
+var rename = require("gulp-rename");
 
 function defaultTask(cb) {
   // place code for your default task here
@@ -12,10 +13,13 @@ function defaultTask(cb) {
 exports.default = defaultTask
 
 //сжимаем js.файлы
-gulp.task('minify-js', function(){
-  gulp.src('./src/js/main.js')
+gulp.task('js', function(cb){
+  return gulp.src('./src/js/up-button.js')
     .pipe(minifyjs())
-    .pipe(gulp.dest('./dist/js'));
+    .pipe(rename('up-button.min.js'))
+    .pipe(gulp.dest('dist/js'));
+
+  cb();
 });
 
 // cжимаем css
