@@ -1,7 +1,5 @@
 $(document).ready(function() {
   var button = $('#button');
-  var brifForm = $('#brif-form');
-  var offerForm = $('#offer-form');
   var modal = $('#modal');
   var close = $('#close');
 
@@ -11,6 +9,11 @@ $(document).ready(function() {
   
   function hideModal() {
     modal.removeClass('modal_active');
+  }
+
+  function cleanValue(str)
+  {
+    $(str).val('');
   }
 
   button.on('click', showModal);
@@ -23,7 +26,9 @@ $(document).ready(function() {
       $('#brif-email').val().length > 4) {
         e.preventDefault();
         showModal();
-        console.log('dot');
+        cleanValue('#brif-phone');
+        cleanValue('#brif-username');
+        cleanValue('#brif-email');
       }
   });
 
@@ -32,7 +37,8 @@ $(document).ready(function() {
       $('#offer-username').val().length > 1) {
         e.preventDefault();
         showModal();
-        console.log('dot');
+        cleanValue('#offer-phone');
+        cleanValue('#offer-username');
     }
   });
 });

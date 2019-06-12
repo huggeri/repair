@@ -7,8 +7,9 @@ var rename = require("gulp-rename");
 
 //сжимаем js.файлы
 gulp.task('minify-js', function(cb){
-  return gulp.src('./src/js/*.js', '!.src/js/*.min.js')
+  return gulp.src('./src/js/modal.js')
     .pipe(minifyjs())
+    .pipe(rename('modal.min.js'))
     .pipe(gulp.dest('dist/js'));
 
   cb();
@@ -64,6 +65,6 @@ gulp.task('tinypng', function (cb) {
     cb();
 });
 
-gulp.task('default', gulp.parallel('minify-js', 'minify-css', 'minify-html', function(cb) {
+gulp.task('default', gulp.parallel('minify-js', 'minify-html', function(cb) {
   cb();
 }));
