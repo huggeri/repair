@@ -523,6 +523,14 @@ div.invalid {
     margin-top: -92px;
     margin-left: 55px;
   }
+  .offer__form #offer-phone-error.invalid {
+    margin-top: 65px;
+    margin-left: -135px;
+  }
+  .offer__form #offer-username-error.invalid {
+    margin-top: -10px;
+    margin-left: -135px;
+  }
   .section {
     padding: 45px 0;
   }
@@ -533,9 +541,13 @@ div.invalid {
     margin-top: -82px;
     margin-left: 10px;
   }
-  .offer__form #offer-phone-error.invalid, .offer__form #offer-username-error.invalid {
-    margin-top: -84px;
-    margin-left: 10px;
+  .offer__form #offer-phone-error.invalid {
+    margin-top: 64px;
+    margin-left: -100px;
+  }
+  .offer__form #offer-username-error.invalid {
+    margin-top: -10px;
+    margin-left: -100px;
   }
   .section {
     padding: 45px 0;
@@ -1123,6 +1135,9 @@ div.invalid {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .hero-list {
     margin-bottom: 44px;
@@ -1136,6 +1151,7 @@ div.invalid {
     padding-right: 10px;
   }
   .hero-text__title {
+    max-width: 570px;
     font-family: 'Museo Sans Bold', sans-serif;
     font-weight: 700;
     font-size: 36px;
@@ -1147,6 +1163,7 @@ div.invalid {
     font-family: 'Museo Sans Bold', sans-serif;
     font-weight: 700;
     font-size: 25px;
+    letter-spacing: -0.5px;
   }
   .hero-image {
     max-width: 570px;
@@ -1196,6 +1213,7 @@ div.invalid {
   }
   .hero-text__subtitle {
     padding-left: 4px;
+    letter-spacing: 0;
   }
   .hero-list {
     margin-bottom: 37px;
@@ -1566,6 +1584,10 @@ div.invalid {
   margin: auto;
 }
 
+.slider__item {
+  outline: none;
+}
+
 @media (max-width: 1200px) {
   .slider {
     padding: 0;
@@ -1593,6 +1615,9 @@ div.invalid {
 }
 
 @media (max-width: 567px) {
+  .portfolio {
+    padding-bottom: 50px;
+  }
   .portfolio__title {
     margin-top: 1px;
     margin-bottom: 42px;
@@ -1783,12 +1808,12 @@ div.invalid {
     line-height: 18px;
   }
   .price {
-    padding-right: 7px;
-    padding-bottom: 14px;
+    padding-right: 3px;
+    padding-bottom: 15px;
     padding-left: 4px;
   }
   .price__title {
-    margin-top: 9px;
+    margin-top: 5px;
     margin-bottom: 25px;
     font-size: 18px;
     line-height: 1.2;
@@ -1798,6 +1823,11 @@ div.invalid {
     margin-left: -15px;
     font-size: 14px;
     line-height: 1.2;
+  }
+  .price__card {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 29px;
   }
 }
 
@@ -2666,6 +2696,12 @@ div.invalid {
 @media (max-width: 567px) {
   .contacts {
     padding-top: 64px;
+    padding-left: 0;
+  }
+  .contacts-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .contacts__title {
     margin-bottom: 32px;

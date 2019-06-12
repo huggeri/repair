@@ -10,21 +10,13 @@ $(document).ready(function() {
   function hideModal() {
     modal.removeClass('modal_active');
   }
-
-  function cleanValue(str)
-  {
-    $(str).val('');
-  }
-
+  
   button.on('click', showModal);
 
   close.on('click', function () {
     hideModal();
-    cleanValue('#brif-phone');
-    cleanValue('#brif-username');
-    cleanValue('#brif-email');
-    cleanValue('#offer-phone');
-    cleanValue('#offer-username');
+    cleanValue('#brif-form').reset();
+    cleanValue('#offer-form').reset();
   });
 
   $('#brif-form').submit(function (e) {
