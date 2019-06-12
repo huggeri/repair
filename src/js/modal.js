@@ -18,16 +18,20 @@ $(document).ready(function() {
 
   button.on('click', showModal);
 
-  close.on('click', hideModal);
+  close.on('click', function () {
+    hideModal();
+    cleanValue('#brif-phone');
+    cleanValue('#brif-username');
+    cleanValue('#brif-email');
+    cleanValue('#offer-phone');
+    cleanValue('#offer-username');
+  });
 
   $('#brif-form').submit(function (e) {
     if($('#brif-phone').val().length > 16 && 
       $('#brif-username').val().length > 1 && 
       $('#brif-email').val().length > 4) {
         showModal();
-        cleanValue('#brif-phone');
-        cleanValue('#brif-username');
-        cleanValue('#brif-email');
       }
   });
 
@@ -35,8 +39,6 @@ $(document).ready(function() {
     if($('#offer-phone').val().length > 16 && 
       $('#offer-username').val().length > 1) {
         showModal();
-        cleanValue('#offer-phone');
-        cleanValue('#offer-username');
     }
   });
 });
