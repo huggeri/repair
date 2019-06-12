@@ -18,6 +18,7 @@
   "homepage": "https://github.com/huggeri/repair#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-file-inline": "^2.2.3",
     "gulp-js-minify": "0.0.3",
