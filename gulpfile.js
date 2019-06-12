@@ -7,9 +7,9 @@ var rename = require("gulp-rename");
 
 //сжимаем js.файлы
 gulp.task('minify-js', function(cb){
-  return gulp.src('./src/js/modal.js')
+  return gulp.src(['src/js/*.js', '!src/js/*.min.js' ])
     .pipe(minifyjs())
-    .pipe(rename('modal.min.js'))
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/js'));
 
   cb();
@@ -21,14 +21,15 @@ gulp.task('minify-css', function(cb) {
   .pipe(cleanCss ({
     compatibility: 'ie8'
   }))
+  .pipe(rename({suffix: '.min'}))
   .pipe(gulp.dest('dist/css'))
 
   cb();
 });
 
 // переносим сжатые бибилиотеки в dist
-gulp.task('move-js', function(cb) {
-  return gulp.src('./src/js/*.min.js')
+gulp.task('move-min-js', function(cb) {
+  return gulp.src('src/js/*.min.js')
   .pipe(gulp.dest('dist/js'))
 
   cb();
@@ -36,7 +37,7 @@ gulp.task('move-js', function(cb) {
 
 // cжимаем html файл
 gulp.task('minify-html', function(cb) {
-  gulp.src('./src/*.html')
+  gulp.src('src/*.html')
   .pipe(htmlMin ({
     collapseWhitespace: true
   }))
@@ -65,6 +66,6 @@ gulp.task('tinypng', function (cb) {
     cb();
 });
 
-gulp.task('default', gulp.parallel('minify-css', function(cb) {
+gulp.task('default', gulp.parallel('minify-js', 'move-min-js', 'minify-css', 'minify-html', 'move-fonts', 'tinypng', function (cb) {
   cb();
 }));
