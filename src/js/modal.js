@@ -24,7 +24,6 @@ $(document).ready(function() {
     if($('#brif-phone').val().length > 16 && 
       $('#brif-username').val().length > 1 && 
       $('#brif-email').val().length > 4) {
-        e.preventDefault();
         showModal();
         cleanValue('#brif-phone');
         cleanValue('#brif-username');
@@ -35,7 +34,6 @@ $(document).ready(function() {
   $('#offer-form').submit(function (e) {
     if($('#offer-phone').val().length > 16 && 
       $('#offer-username').val().length > 1) {
-        e.preventDefault();
         showModal();
         cleanValue('#offer-phone');
         cleanValue('#offer-username');
