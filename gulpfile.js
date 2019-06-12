@@ -5,18 +5,10 @@ var tinyPNG = require('gulp-tinypng-compress');
 var minifyjs = require('gulp-js-minify');
 var rename = require("gulp-rename");
 
-function defaultTask(cb) {
-  // place code for your default task here
-  cb();
-}
-
-exports.default = defaultTask
-
 //сжимаем js.файлы
-gulp.task('js', function(cb){
-  return gulp.src('./src/js/map-settings.js')
+gulp.task('minify-js', function(cb){
+  return gulp.src(['./src/js/*.js', '!.src/js/*.min.js'])
     .pipe(minifyjs())
-    .pipe(rename('map-settings.min.js'))
     .pipe(gulp.dest('dist/js'));
 
   cb();
@@ -71,3 +63,7 @@ gulp.task('tinypng', function (cb) {
 
     cb();
 });
+
+gulp.task('default', gulp.parallel('minify-js', 'minify-css', 'minify-html', function(cb) {
+  cb();
+}));

@@ -1342,10 +1342,10 @@ div.invalid {
     line-height: 1.2;
   }
   .offer__input {
-    max-width: 570px;
+    max-width: 370px;
   }
   .offer__button {
-    max-width: 570px;
+    max-width: 370px;
   }
   .offer__title, .offer__subtitle {
     max-width: 570px;
@@ -1716,7 +1716,7 @@ div.invalid {
   }
 }
 
-@media (max-width: 790px) {
+@media (max-width: 825px) {
   .cards {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2706,17 +2706,34 @@ div.invalid {
 .modal-dialog {
   position: relative;
   width: 90%;
-  max-width: 450px;
   min-width: 200px;
+  max-width: 450px;
   margin: auto;
-  background-color: #fff;
   padding: 40px;
+  font-family: 'Museo Sans Light', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  color: #333333;
+  background-color: #f5f5f5;
+  border-radius: 5px;
 }
 
 .modal-dialog__close {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
+  width: 30px;
+  height: 30px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  text-align: center;
+  color: #333333;
+  background-color: #ffd200;
+  border-style: none;
+  border-radius: 5px;
+  outline: none;
 }
 
 /* Импорт стилей кнопки назад */
