@@ -7,7 +7,7 @@ var rename = require("gulp-rename");
 
 //сжимаем js.файлы
 gulp.task('minify-js', function(cb){
-  return gulp.src(['./src/js/*.js', '!.src/js/*.min.js'])
+  return gulp.src('./src/js/*.js', '!.src/js/*.min.js')
     .pipe(minifyjs())
     .pipe(gulp.dest('dist/js'));
 
@@ -27,7 +27,7 @@ gulp.task('minify-css', function(cb) {
 
 // переносим сжатые бибилиотеки в dist
 gulp.task('move-js', function(cb) {
-  return gulp.src('./src/js/*.js')
+  return gulp.src('./src/js/*.min.js')
   .pipe(gulp.dest('dist/js'))
 
   cb();
