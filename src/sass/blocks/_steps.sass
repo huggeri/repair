@@ -1,0 +1,155 @@
+.step
+  position: relative
+  flex-basis: 20%
+  text-align: center
+
+  &:after
+    content: ''
+    position: absolute
+    top: -12px
+    right: -16%
+    width: 73px
+    height: 25px
+    background: url('../img/steps/arrow.png') no-repeat center
+
+  &:last-child
+    .step__image
+      padding-left: 5px
+    &:after
+      display: none
+
+  &__image
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100px
+    height: 100px
+    margin: auto
+    margin-bottom: 26px
+    border: 3px solid $main-color
+    border-radius: 50%
+  
+  &__text
+    max-width: 151px
+    margin: auto
+    font-size: 14px
+    line-height: 20px
+
+  &s
+    padding: 33px 0
+
+    &-block
+      display: flex
+      flex-wrap: wrap
+
+    &__title
+      max-width: 670px
+      margin: auto
+      margin-bottom: 39px
+      font-size: 30px
+      line-height: 45px
+
+    &__subtitle
+      text-align: center
+      margin-bottom: 58px
+      margin-left: 2px
+      font-size: 20px
+      line-height: 45px
+      letter-spacing: -0.15px
+
+@media (max-width: 1200px)
+  .step
+    margin-bottom: 30px
+    flex-basis: 50%
+
+    &:after
+      display: none
+
+    &s
+      &-block
+        justify-content: center
+
+@media (max-width: 768px)
+  .step
+    margin-bottom: 30px
+
+    &:after
+      display: none
+
+    &s
+      &-block
+        flex-direction: column
+
+@media (max-width: 1200px)
+  .step
+    &s
+      &__title
+        max-width: 540px
+        margin-bottom: 20px
+        font-size: 24px
+        line-height: 35px
+
+      &__subtitle
+        font-size: 16px
+
+@media (max-width: 768px)
+  .step
+    &s
+      &__title
+        margin-bottom: 10px
+        font-size: 22px
+        line-height: 1.2
+
+      &__subtitle
+        margin-bottom: 30px
+        font-size: 16px
+
+@media (max-width: 567px)
+  .step
+    padding-right: 4px
+
+    &__text
+      font-size: 12px
+      line-height: 16px
+
+  .step
+    &:first-child    
+      .step__image
+        margin-bottom: 19px
+    &:nth-child(2)
+      .step
+        &__image
+          margin-bottom: 27px
+        &__text
+          width: 130px
+    &:nth-child(3)
+      .step
+        &__image
+          margin-bottom: 27px
+    &:nth-child(4)
+      .step
+        &__image
+          margin-top: -3px
+          margin-bottom: 29px
+    &:nth-child(5)
+      .step
+        &__image
+          margin-top: -3px
+          margin-bottom: 28px
+
+  .step
+    &s
+      padding-top: 0
+
+      &__title
+        margin-top: 9px
+        margin-bottom: 25px
+        margin-right: 5px
+        font-size: 18px
+        line-height: 1.2
+    
+      &__subtitle
+        margin-bottom: 34px
+        margin-right: 5px
+        font-size: 14px
+        line-height: 1.2

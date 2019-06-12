@@ -1,0 +1,124 @@
+.advantage
+  &__item
+    max-width: 370px
+    margin-top: 100px
+    padding: 22px 50px 319px 25px
+
+    &:first-child
+      background: $bgc-advantages url('../img/advantages/man-1.png') no-repeat bottom
+      background-size: contain
+      padding-right: 70px
+
+    &:nth-child(2)
+      background: $bgc-advantages url('../img/advantages/man-2.png') no-repeat bottom
+      background-size: contain
+
+    &:last-child
+      background: $bgc-advantages url('../img/advantages/man-3.png') no-repeat bottom
+      background-size: contain
+
+  &__text
+    font-size: 16px
+    line-height: 23px
+
+    &_bold
+      +bold
+
+  &s
+    padding: 60px 0
+
+    &-title
+      margin: 0
+      +reg
+      font-size: 32px
+      line-height: 50px
+
+    &-block
+      display: flex
+      justify-content: space-between
+
+.title-block
+  text-align: center
+  background-color: $main-color
+  padding: 89px 0 92px 0
+
+@media (max-width: 1200px)
+  .advantage
+    &__item
+      &:first-child
+        margin-right: 20px
+      &:last-child
+        margin-top: 40px
+
+    &s
+      &-block
+        flex-wrap: wrap
+        justify-content: center
+
+      &-title
+        font-size: 30px
+        line-height: 40px
+
+  .title-block
+    padding: 90px 50px
+
+@media (max-width: 799px)
+  .advantage
+    &__item
+      &:first-child
+        margin: 100px 20px 50px 20px
+      &:nth-child(2)
+        margin: 0 20px 50px 20px
+      &:last-child
+        margin: 0 20px
+
+    &s
+      &-title
+        font-size: 25px
+        line-height: 35px
+
+  .title-block
+    padding: 70px 50px
+
+@media (max-width: 586px)
+  .title-block
+    padding: 70px 30px 73px 30px
+
+  .advantages-title
+    font-size: 18px
+    line-height: 1.25
+
+@media (max-width: 567px)
+  .advantage
+    &__item
+      max-width: 272px
+      
+      &:first-child
+        margin: 0
+        margin-bottom: 31px
+        padding: 13px 30px 233px 19px
+
+      &:nth-child(2)
+        max-width: 277px
+        margin: 0
+        margin-bottom: 29px
+        padding: 15px 30px 238px 23px
+
+      &:last-child
+        max-width: 274px
+        margin: 0
+        margin-left: -4px
+        padding: 13px 30px 236px 18px
+
+    &__text
+      font-size: 12px
+      line-height: 8px
+
+    &s
+      padding: 10px 0
+      &-block
+        padding: 60px 0
+
+      &-title
+        font-size: 18px
+        line-height: 1.25

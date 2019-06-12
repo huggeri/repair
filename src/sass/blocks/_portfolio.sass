@@ -1,0 +1,62 @@
+.portfolio
+  background: $bgc-color url('../img/portfolio/portfolio-pattern.jpg') repeat-y center left
+  background-size: 50%
+
+  &__title
+    max-width: 820px
+    margin: auto
+    margin-bottom: 92px
+    font-size: 30px
+    line-height: 45px
+
+  &__arrows
+    display: flex
+    justify-content: space-between
+    max-width: 120px
+    margin: auto
+    margin-top: 68px
+    margin-bottom: 10px
+
+  &__slider
+    width: 1200px
+    margin-left: -16px
+
+.slider
+  &__image
+    margin: auto
+
+@media (max-width: 1200px)
+  .slider
+    padding: 0
+
+  .portfolio
+    &__title
+      margin-bottom: 50px
+      font-size: 24px
+      line-height: 35px
+    &__slider
+      width: 100%
+      margin: auto
+
+@media (max-width: 768px)
+  .portfolio
+    background: $bgc-color
+    &__title
+      max-width: 400px
+      font-size: 22px
+      line-height: 1.2
+
+@media (max-width: 567px)
+  .portfolio
+    &__title
+      margin-top: 1px
+      margin-bottom: 42px
+      margin-left: -2px
+      font-size: 18px
+      line-height: 1.2
+
+    &__arrows
+      margin-top: 46px
+
+  .slider
+    padding: 0 19px 0 15px
