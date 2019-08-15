@@ -111,3 +111,7 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+package-lock.json
+package.json
+bfg-1.13.0.jar
